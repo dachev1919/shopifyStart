@@ -1,0 +1,21 @@
+{% schema %}
+    {
+        "name": "Awesome Block",
+        "settings": []
+    }
+{% endschema %}
+<div class="awesome">
+    <h1>
+        {{ product.price | money }}
+    </h1>
+</div>
+{% stylesheet %}
+    #awesome h1 {
+        background: rgba(123, 29, 243, .4);
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
