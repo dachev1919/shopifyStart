@@ -1,20 +1,37 @@
-{% schema %}
-    {
-        "name": "Awesome Block",
-        "settings": []
-    }
-{% endschema %}
-<div class="awesome">
+<div id="awesome">
     <h1>
-        {{ product.price | money }}
+        {% comment %}{{ product.price | money }}{% endcomment %}
+        Hello, World:D
     </h1>
 </div>
-{% stylesheet %}
+{% schema %}
+    {
+        "name": "Awesome",
+        "settings": [
+        ],
+        "presets": [
+            {
+                "name": "awesome"
+            }
+        ]
+    }
+{% endschema %}
+<style>
+    #awesome {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     #awesome h1 {
         background: rgba(123, 29, 243, .4);
         padding: 5px 10px;
         border-radius: 5px;
+        width: max-content;
+
     }
+</style>
+{% stylesheet %}
 {% endstylesheet %}
 
 {% javascript %}

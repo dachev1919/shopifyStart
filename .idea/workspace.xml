@@ -5,158 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a32ced2b-8a22-496d-b09c-6acf9a3b9058" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/sections/awesome.liquid" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/cart-notification.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/cart-notification.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/collage.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/collage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-accordion.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-accordion.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-article-card.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-article-card.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-card.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-card.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-cart-items.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-cart-items.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-cart-notification.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-cart-notification.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-cart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-collection-hero.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-collection-hero.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-deferred-media.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-deferred-media.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-discounts.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-discounts.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-facets.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-facets.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-image-with-text.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-image-with-text.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-list-menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-list-menu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-list-payment.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-list-payment.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-list-social.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-list-social.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-loading-overlay.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-loading-overlay.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-menu-drawer.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-menu-drawer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-model-viewer-ui.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-model-viewer-ui.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-newsletter.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-newsletter.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-pagination.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-pagination.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-pickup-availability.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-pickup-availability.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-predictive-search.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-predictive-search.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-price.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-price.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-product-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-product-grid.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-product-model.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-product-model.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-rating.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-rating.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-rte.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-rte.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-search.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-search.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-slider.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-slider.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/component-totals.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/component-totals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/customer.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/customer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/customer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/details-disclosure.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/details-disclosure.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/details-modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/details-modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/disclosure.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/disclosure.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/facets.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/facets.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/global.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/newsletter-section.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/newsletter-section.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/password-modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/password-modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pickup-availability.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/pickup-availability.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/predictive-search.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/predictive-search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/product-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/product-form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/product-model.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/product-model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/section-blog-post.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/section-blog-post.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/section-collection-list.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/section-collection-list.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/section-contact-form.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/section-contact-form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/section-email-signup-banner.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/section-email-signup-banner.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/section-featured-blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/section-featured-blog.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/section-featured-product.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/section-featured-product.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/section-footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/section-footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/section-image-banner.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/section-image-banner.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/section-main-blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/section-main-blog.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/section-main-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/section-main-page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/section-main-product.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/section-main-product.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/section-multicolumn.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/section-multicolumn.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/section-password.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/section-password.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/section-product-recommendations.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/section-product-recommendations.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/section-rich-text.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/section-rich-text.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/share.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/share.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/template-collection.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/template-collection.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/template-giftcard.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/template-giftcard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/video-section.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/video-section.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout/password.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/layout/password.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout/theme.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/layout/theme.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/announcement-bar.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/announcement-bar.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/apps.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/apps.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/cart-icon-bubble.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/cart-icon-bubble.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/cart-live-region-text.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/cart-live-region-text.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/cart-notification-button.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/cart-notification-button.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/cart-notification-product.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/cart-notification-product.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/collage.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/collage.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/collection-list.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/collection-list.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/contact-form.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/contact-form.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/custom-liquid.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/custom-liquid.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/email-signup-banner.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/email-signup-banner.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/featured-blog.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/featured-blog.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/featured-collection.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/featured-collection.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/featured-product.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/featured-product.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/footer.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/footer.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/header.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/header.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/image-banner.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/image-banner.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/image-with-text.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/image-with-text.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/main-404.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/main-404.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/main-article.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/main-article.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/main-blog.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/main-blog.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/main-cart-footer.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/main-cart-footer.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/main-cart-items.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/main-cart-items.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/main-collection-banner.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/main-collection-banner.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/main-collection-product-grid.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/main-collection-product-grid.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/main-list-collections.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/main-list-collections.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/main-page.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/main-page.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/main-password-footer.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/main-password-footer.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/main-password-header.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/main-password-header.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/main-product.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/main-product.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/main-search.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/main-search.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/multicolumn.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/multicolumn.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/newsletter.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/newsletter.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/page.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/page.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/pickup-availability.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/pickup-availability.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/predictive-search.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/predictive-search.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/product-recommendations.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/product-recommendations.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/rich-text.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/rich-text.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/video.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/video.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/article-card.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/article-card.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/cart-notification.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/cart-notification.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/facets.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/facets.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-3d-model.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-3d-model.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-accordion.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-accordion.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-account.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-account.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-arrow.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-arrow.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-caret.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-caret.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-cart-empty.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-cart-empty.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-cart.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-cart.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-checkmark.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-checkmark.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-clipboard.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-clipboard.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-close-small.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-close-small.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-close.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-close.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-discount.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-discount.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-error.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-error.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-facebook.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-facebook.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-filter.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-filter.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-hamburger.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-hamburger.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-instagram.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-instagram.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-minus.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-minus.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-padlock.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-padlock.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-pinterest.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-pinterest.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-play.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-play.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-plus.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-plus.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-remove.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-remove.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-share.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-share.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-snapchat.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-snapchat.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-success.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-success.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-tick.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-tick.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-tiktok.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-tiktok.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-tumblr.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-tumblr.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-twitter.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-twitter.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-unavailable.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-unavailable.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-vimeo.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-vimeo.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-youtube.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-youtube.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/icon-zoom.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/icon-zoom.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/meta-tags.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/meta-tags.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/pagination.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/pagination.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/price.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/price.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/product-card-placeholder.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/product-card-placeholder.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/product-card.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/product-card.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/product-media.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/product-media.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/product-thumbnail.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/product-thumbnail.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/awesome.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/awesome.liquid" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +51,7 @@
       <workItem from="1639326288741" duration="1246000" />
       <workItem from="1639327617719" duration="1196000" />
       <workItem from="1639415558970" duration="5011000" />
-      <workItem from="1639502369246" duration="1545000" />
+      <workItem from="1639502369246" duration="3549000" />
     </task>
     <servers />
   </component>
