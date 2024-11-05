@@ -38,8 +38,8 @@
           {% if collection.products_count < 4 %} grid--{{ collection.products_count }}-col-tablet{% else %}
             {% if collection.products_count == 4 %} grid--4-col-desktop{% else %} grid--3-col-tablet grid--one-third-max grid--4-col-desktop grid--quarter-max{% endif %}
           {% endif %}">
-          {%- for product in sorted_products -%}
-            <li class="grid__item" data-metadate="{{ product.metafields.custom.test_1 }}">
+          {%- for product in collection.products -%}
+            <li class="grid__item" style="order: {{ product.metafields.custom.test_1  }};">
               {% render 'product-card',
                 product_card_product: product,
                 media_size: section.settings.image_ratio,
