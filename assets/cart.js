@@ -1,3 +1,25 @@
+class ThemeEvents {
+  /** @static @constant {string} Event triggered when a variant is selected */
+  static variantSelected = 'variant:selected';
+  /** @static @constant {string} Event triggered when a variant is changed */
+  static variantUpdate = 'variant:update';
+  /** @static @constant {string} Event triggered when the cart items or quantities are updated */
+  static cartUpdate = 'cart:update';
+  /** @static @constant {string} Event triggered when a cart update fails */
+  static cartError = 'cart:error';
+  /** @static @constant {string} Event triggered when a media (video, 3d model) is loaded */
+  static mediaStartedPlaying = 'media:started-playing';
+  // Event triggered when quantity-selector value is changed
+  static quantitySelectorUpdate = 'quantity-selector:update';
+  /** @static @constant {string} Event triggered when a predictive search is expanded */
+  static megaMenuHover = 'megaMenu:hover';
+  /** @static @constant {string} Event triggered when a zoom dialog media is selected */
+  static zoomMediaSelected = 'zoom-media:selected';
+  /** @static @constant {string} Event triggered when a discount is applied */
+  static discountUpdate = 'discount:update';
+  /** @static @constant {string} Event triggered when changing collection filters */
+  static FilterUpdate = 'filter:update';
+}
 class CartRemoveButton extends HTMLElement {
   constructor() {
     super();
