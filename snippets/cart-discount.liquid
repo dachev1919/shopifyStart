@@ -600,7 +600,7 @@ class CartDiscount extends Component {
       const config = fetchConfig('json', {
         body: JSON.stringify({
           discount: [...existingDiscounts, discountCodeValue].join(','),
-          // sections: [this.dataset.sectionId],
+          sections: [this.dataset.sectionId],
         }),
       });
 
