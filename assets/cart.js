@@ -24,8 +24,25 @@ class CartItems extends HTMLElement {
     }, 300);
 
     this.addEventListener('change', this.debouncedOnChange.bind(this));
+    document.addEventListener(ThemeEvents.discountUpdate, this.handleDiscountUpdate);
   }
+  handleDiscountUpdate = (event) => {
+    this.#handleCartUpdate(event);
+  };
+  #handleCartUpdate = (event) => {
+    if (event instanceof DiscountUpdateEvent) {
+      sectionRenderer.renderSection(this.sectionId, { cache: false });
+      return;
+    }
+    if (event.target === this) return;
 
+    const cartItemsHtml = event.detail.data.sections?.[this.sectionId];
+    if (cartItemsHtml) {
+      morphSection(this.sectionId, cartItemsHtml);
+    } else {
+      sectionRenderer.renderSection(this.sectionId, { cache: false });
+    }
+  };
   onChange(event) {
     this.updateQuantity(event.target.dataset.index, event.target.value, document.activeElement.getAttribute('name'));
   }
