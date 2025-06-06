@@ -232,6 +232,7 @@
 
 
 <script>
+  console.log('111111')
   class Component extends DeclarativeShadowElement {
   refs = ({});
   requiredRefs;
@@ -706,5 +707,8 @@ class CartDiscount extends Component {
   }
 }
 
-customElements.define('cart-discount-component', CartDiscount);
+if (!customElements.get('cart-discount-component')) {
+  console.log('11111111111111111111111')
+  customElements.define('cart-discount-component', CartDiscount);
+}
 </script>
