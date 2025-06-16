@@ -29,10 +29,13 @@
       declarative-open
     >
       <summary class="cart-discount__summary">
-        <span class="cart-discount__label h6">{{ 'content.discount' | t }}</span>
+        <span class="cart-discount__label h6">Discount</span>
 
         <span class="svg-wrapper icon-plus">
-          {{- 'icon-plus.svg' | inline_asset_content -}}
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="vertical" d="M2.75 7H11.25" stroke="currentColor" stroke-width="var(--icon-stroke-width)" stroke-linecap="round"/>
+            <path class="horizontal" d="M7 2.75L7 11.25" stroke="currentColor" stroke-width="var(--icon-stroke-width)" stroke-linecap="round"/>
+          </svg>
         </span>
       </summary>
 
@@ -47,19 +50,19 @@
               for="cart-discount"
               class="visually-hidden"
             >
-              {{- 'accessibility.discount' | t -}}
+              Apply a discount code
             </label>
             <input
               id="cart-discount"
               class="cart-discount__input"
               name="discount"
-              placeholder="{{ 'content.discount_code' | t }}"
+              placeholder="Discount code"
             >
             <button
               type="submit"
               class="button button--primary cart-discount__button"
             >
-              {{ 'actions.apply' | t }}
+              Apply
             </button>
           </form>
         </div>
@@ -75,13 +78,13 @@
             class="cart-discount__error-text cart-primary-typography hidden"
             ref="cartDiscountErrorDiscountCode"
           >
-            {{ 'content.discount_code_error' | t: code: 'test' }}
+            Discount code cannot be applied to your cart
           </small>
           <small
             class="cart-discount__error-text cart-primary-typography hidden"
             ref="cartDiscountErrorShipping"
           >
-            {{ 'content.shipping_discount_error' | t }}
+            Shipping discounts are shown at checkout after adding an address
           </small>
         </div>
         <ul class="cart-discount__codes">
@@ -89,7 +92,7 @@
             <li
               class="cart-discount__pill"
               data-discount-code="{{ discount_code }}"
-              aria-label="{{ 'accessibility.discount_applied' | t: code: discount_code }}"
+              aria-label="Applied discount code: {{ discount_code }}"
             >
               <p class="cart-discount__pill-code">
                 {{ discount_code }}
@@ -98,7 +101,7 @@
                 type="button"
                 on:click="/removeDiscount"
                 class="cart-discount__pill-remove svg-wrapper svg-wrapper--smaller button-unstyled"
-                aria-label="{{ 'actions.remove_discount' | t: code: discount_code }}"
+                aria-label="Remove discount {{ discount_code }}"
               >
                 {{- 'icon-filters-close.svg' | inline_asset_content -}}
               </button>
