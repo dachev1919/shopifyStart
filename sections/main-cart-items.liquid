@@ -5,8 +5,8 @@
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
-{% for ship in order.shipping_methods %}
-  {{ ship | json }}
+{% for ship in order.shipping_methods %}1
+  {{ ship.title }}
 {% endfor %}
 <div class="page-width">{% render 'cart-discount', section_id: section.id %} </div>
 
