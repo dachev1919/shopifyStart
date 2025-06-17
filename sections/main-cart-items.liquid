@@ -5,7 +5,7 @@
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
-{{ order.shipping_method|json }}
+{{ order.shipping_method.title }}
 <div class="page-width">{% render 'cart-discount', section_id: section.id %} </div>
 
 <cart-items class="page-width{% if cart == empty %} is-empty{% endif %}">
