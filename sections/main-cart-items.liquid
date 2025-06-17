@@ -5,7 +5,14 @@
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
-{{ order.shipping_method.title }}
+<td> 
+    {%- for line_item in order.line_items -%}
+        <div>
+            {{ line_item.fulfillment.tracking_company }}
+            {%- if line_item.fulfillment.tracking_number -%} #{{ line_item.fulfillment.tracking_number }} {%- endif -%}
+        </div>
+    {%- endfor -%}
+</td>
 <div class="page-width">{% render 'cart-discount', section_id: section.id %} </div>
 
 <cart-items class="page-width{% if cart == empty %} is-empty{% endif %}">
