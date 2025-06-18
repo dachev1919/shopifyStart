@@ -37,6 +37,15 @@ export const requestIdleCallback =
   typeof window.requestIdleCallback == 'function' ? window.requestIdleCallback : setTimeout;
 
 /**
+ * Builds a section selector
+ * @param {string} sectionId - The section ID
+ * @returns {string} The section selector
+ */
+function buildSectionSelector(sectionId) {
+  return `shopify-section-${sectionId}`;
+}
+
+/**
  * Morphs the existing section element with the new section contents
  *
  * @param {string} sectionId - The section ID
