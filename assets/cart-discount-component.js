@@ -219,6 +219,7 @@ function registerEventListeners() {
 
   for (const eventName of [...events, ...expensiveEvents]) {
     const attribute = `on:${eventName}`;
+    console.log(attribute)
 
     document.addEventListener(
       eventName,
