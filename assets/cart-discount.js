@@ -67,7 +67,7 @@ class CartDiscount extends Component {
         }),
       });
 
-      const response = await fetch(`${theme.routes.cart_update_url}.js`, {
+      const response = await fetch(Theme.routes.cart_update_url, {
         ...config,
         signal: abortController.signal,
       });
