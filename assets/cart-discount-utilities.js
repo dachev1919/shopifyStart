@@ -95,7 +95,6 @@ export class DiscountUpdateEvent extends Event {
  * @returns {RequestInit} The fetch configuration object
  */
 export function fetchConfig(type = 'json', config = {}) {
-  /** @type {Headers} */
   const headers = { 'Content-Type': 'application/json', Accept: `application/${type}`, ...config.headers };
 
   if (type === 'javascript') {
@@ -105,7 +104,7 @@ export function fetchConfig(type = 'json', config = {}) {
 
   return {
     method: 'POST',
-    headers: /** @type {HeadersInit} */ (headers),
+    headers: (headers),
     body: config.body,
   };
 }
