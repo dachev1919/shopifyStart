@@ -10,6 +10,24 @@ class DeclarativeShadowElement extends HTMLElement {
     }
   }
 }
+
+/**
+ * Recursively finds the closest ancestor that is an instance of `Component`.
+ *
+ * @param {Node | null} node - The starting node to search from.
+ * @returns {HTMLElement | null} The closest ancestor `Component` instance or null if none is found.
+ */
+function getClosestComponent(node) {
+  if (!node) return null;
+  if (node instanceof Component) return node;
+  if (node instanceof HTMLElement && node.tagName.toLowerCase().endsWith('-component')) return node;
+
+  const ancestor = getAncestor(node);
+  if (ancestor) return getClosestComponent(ancestor);
+
+  return null;
+}
+
 let initialized = false;
 function registerEventListeners() {
   if (initialized) return;
