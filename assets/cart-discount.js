@@ -5,13 +5,17 @@ class CartDiscount {
   constructor(element) {
     // Required DOM elements
     this.element = element;
-    this.cartDiscountError = element.querySelector('[ref="cartDiscountError"]');
-    this.cartDiscountErrorDiscountCode = element.querySelector('[ref="cartDiscountErrorDiscountCode"]');
-    this.cartDiscountErrorShipping = element.querySelector('[ref="cartDiscountErrorShipping"]');
+    this.cartDiscountError = element.querySelector('[data-ref="cartDiscountError"]');
+    this.cartDiscountErrorDiscountCode = element.querySelector('[data-ref="cartDiscountErrorDiscountCode"]');
+    this.cartDiscountErrorShipping = element.querySelector('[data-ref="cartDiscountErrorShipping"]');
     this.sectionId = element.dataset.sectionId;
 
     // Abort controller for fetch requests
     this.activeFetch = null;
+
+    // Bind methods
+    this.applyDiscount = this.applyDiscount.bind(this);
+    this.removeDiscount = this.removeDiscount.bind(this);
 
     // Initialize event listeners
     this.init();
@@ -22,6 +26,8 @@ class CartDiscount {
     if (form) {
       form.addEventListener('submit', this.applyDiscount);
     }
+    this.element.addEventListener('click', this.removeDiscount);
+    this.element.addEventListener('keydown', this.removeDiscount);
   }
 
   #createAbortController() {
