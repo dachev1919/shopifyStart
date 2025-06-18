@@ -5,9 +5,9 @@ class CartDiscount {
   constructor(element) {
     // Required DOM elements
     this.element = element;
-    this.cartDiscountError = element.querySelector('[data-ref="cartDiscountError"]');
-    this.cartDiscountErrorDiscountCode = element.querySelector('[data-ref="cartDiscountErrorDiscountCode"]');
-    this.cartDiscountErrorShipping = element.querySelector('[data-ref="cartDiscountErrorShipping"]');
+    this.cartDiscountError = element.querySelector('[ref="cartDiscountError"]');
+    this.cartDiscountErrorDiscountCode = element.querySelector('[ref="cartDiscountErrorDiscountCode"]');
+    this.cartDiscountErrorShipping = element.querySelector('[ref="cartDiscountErrorShipping"]');
     this.sectionId = element.dataset.sectionId;
 
     // Abort controller for fetch requests
