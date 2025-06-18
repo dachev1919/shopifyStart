@@ -55,7 +55,7 @@ class CartDiscount extends Component {
     try {
       const existingDiscounts = this.#existingDiscounts();
       if (existingDiscounts.includes(discountCodeValue)) return;
-
+console.log('existingDiscounts')
       cartDiscountError.classList.add('hidden');
       cartDiscountErrorDiscountCode.classList.add('hidden');
       cartDiscountErrorShipping.classList.add('hidden');
@@ -73,7 +73,7 @@ class CartDiscount extends Component {
       });
 
       const data = await response.json();
-console.log(data)
+
       if (
         data.discount_codes.find((/** @type {{ code: string; applicable: boolean; }} */ discount) => {
           return discount.code === discountCodeValue && discount.applicable === false;
