@@ -26,8 +26,6 @@ class CartDiscount {
     if (form) {
       form.addEventListener('submit', this.applyDiscount);
     }
-    this.element.addEventListener('click', this.removeDiscount);
-    this.element.addEventListener('keydown', this.removeDiscount);
   }
 
   #createAbortController() {
