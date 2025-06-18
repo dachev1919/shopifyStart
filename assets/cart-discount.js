@@ -55,7 +55,7 @@ class CartDiscount extends Component {
     try {
       const existingDiscounts = this.#existingDiscounts();
       if (existingDiscounts.includes(discountCodeValue)) return;
-console.log('existingDiscounts')
+
       cartDiscountError.classList.add('hidden');
       cartDiscountErrorDiscountCode.classList.add('hidden');
       cartDiscountErrorShipping.classList.add('hidden');
@@ -66,7 +66,7 @@ console.log('existingDiscounts')
           sections: [this.dataset.sectionId],
         }),
       });
-
+console.log(config)
       const response = await fetch(Theme.routes.cart_update_url, {
         ...config,
         signal: abortController.signal,
