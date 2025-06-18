@@ -1,8 +1,7 @@
-import { Component } from './component';
-import { morphSection } from './section-renderer';
-import { DiscountUpdateEvent } from './events';
-import { fetchConfig } from './utilities';
-import { cartPerformance } from './performance';
+import { Component } from './cart-discount-component';
+import { morphSection } from './cart-discount-utilities';
+import { DiscountUpdateEvent } from './cart-discount-utilities';
+import { fetchConfig } from './cart-discount-utilities';
 
 /**
  * A custom element that applies a discount to the cart.
@@ -113,7 +112,6 @@ class CartDiscount extends Component {
     } catch (error) {
     } finally {
       this.#activeFetch = null;
-      cartPerformance.measureFromEvent('discount-update:user-action', event);
     }
   };
 
