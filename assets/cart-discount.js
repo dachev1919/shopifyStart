@@ -1,8 +1,8 @@
-import { Component } from '@theme/component';
-import { morphSection } from '@theme/section-renderer';
-import { DiscountUpdateEvent } from '@theme/events';
-import { fetchConfig } from '@theme/utilities';
-import { cartPerformance } from '@theme/performance';
+import { Component } from './component';
+import { morphSection } from './section-renderer';
+import { DiscountUpdateEvent } from './events';
+import { fetchConfig } from './utilities';
+import { cartPerformance } from './performance';
 
 /**
  * A custom element that applies a discount to the cart.
