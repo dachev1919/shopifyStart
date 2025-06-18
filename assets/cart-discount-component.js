@@ -225,7 +225,7 @@ function registerEventListeners() {
       eventName,
       (event) => {
         const element = getElement(event);
-console.log(element)
+
         if (!element) return;
 
         const proxiedEvent =
@@ -260,7 +260,7 @@ console.log(element)
         method = method.replace(/\?.*/, '');
 
         const callback = /** @type {any} */ (instance)[method];
-console.log(callback)
+        
         if (typeof callback === 'function') {
           try {
             /** @type {(Event | Data)[]} */
