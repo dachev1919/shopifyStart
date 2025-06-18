@@ -13,10 +13,6 @@ class CartDiscount {
     // Abort controller for fetch requests
     this.activeFetch = null;
 
-    // Bind methods
-    this.applyDiscount = this.applyDiscount.bind(this);
-    this.removeDiscount = this.removeDiscount.bind(this);
-
     // Initialize event listeners
     this.init();
   }
