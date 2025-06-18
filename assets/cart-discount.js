@@ -2,12 +2,12 @@ class CartDiscount {
     constructor() {
         this.component = this;
         this.activeFetch = null;
-        this.sectionId = component.dataset.sectionId;
+        this.sectionId = this.dataset.sectionId;
 
         // Перевірка наявності необхідних елементів
-        this.cartDiscountError = component.querySelector('[ref="cartDiscountError"]');
-        this.cartDiscountErrorDiscountCode = component.querySelector('[ref="cartDiscountErrorDiscountCode"]');
-        this.cartDiscountErrorShipping = component.querySelector('[ref="cartDiscountErrorShipping"]');
+        this.cartDiscountError = this.querySelector('[ref="cartDiscountError"]');
+        this.cartDiscountErrorDiscountCode = this.querySelector('[ref="cartDiscountErrorDiscountCode"]');
+        this.cartDiscountErrorShipping = this.querySelector('[ref="cartDiscountErrorShipping"]');
 
         if (!this.sectionId || !this.cartDiscountError || !this.cartDiscountErrorDiscountCode || !this.cartDiscountErrorShipping) {
             console.error('Відсутні необхідні елементи або sectionId');
