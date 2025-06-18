@@ -219,13 +219,13 @@ function registerEventListeners() {
 
   for (const eventName of [...events, ...expensiveEvents]) {
     const attribute = `on:${eventName}`;
-    console.log(attribute)
+    
 
     document.addEventListener(
       eventName,
       (event) => {
         const element = getElement(event);
-
+console.log(element)
         if (!element) return;
 
         const proxiedEvent =
