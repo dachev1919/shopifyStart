@@ -36,6 +36,7 @@ class CartDiscount extends Component {
    * @param {SubmitEvent} event - The submit event on our form.
    */
   applyDiscount = async (event) => {
+    console.log('applyDiscount')
     const { cartDiscountError, cartDiscountErrorDiscountCode, cartDiscountErrorShipping } = this.refs;
 
     event.preventDefault();
@@ -120,6 +121,7 @@ class CartDiscount extends Component {
    * @param {MouseEvent | KeyboardEvent} event - The mouse or keyboard event in our pill.
    */
   removeDiscount = async (event) => {
+    console.log('removeDiscount')
     event.preventDefault();
     event.stopPropagation();
 
