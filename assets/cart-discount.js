@@ -36,7 +36,7 @@ class CartDiscount extends Component {
    * @param {SubmitEvent} event - The submit event on our form.
    */
   applyDiscount = async (event) => {
-    
+    console.log(DiscountUpdateEvent)
     const { cartDiscountError, cartDiscountErrorDiscountCode, cartDiscountErrorShipping } = this.refs;
 
     event.preventDefault();
