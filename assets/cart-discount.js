@@ -3,6 +3,7 @@ class CartDiscount {
         this.component = this;
         this.activeFetch = null;
         this.sectionId = this.dataset.sectionId;
+      console.log(this)
 
         // Перевірка наявності необхідних елементів
         this.cartDiscountError = this.querySelector('[ref="cartDiscountError"]');
