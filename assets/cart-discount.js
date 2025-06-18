@@ -1,6 +1,6 @@
 class CartDiscount {
-    constructor(component) {
-        this.component = component;
+    constructor() {
+        this.component = this;
         this.activeFetch = null;
         this.sectionId = component.dataset.sectionId;
 
