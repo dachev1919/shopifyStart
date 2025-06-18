@@ -10,6 +10,7 @@ class DeclarativeShadowElement extends HTMLElement {
     }
   }
 }
+let initialized = false;
 function registerEventListeners() {
   if (initialized) return;
   initialized = true;
