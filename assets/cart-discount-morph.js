@@ -1,4 +1,4 @@
-import { Component } from './component';
+import { Component } from './cart-discount-component.js';
 
 /**
  * @typedef {Object} Options
