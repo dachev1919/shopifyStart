@@ -243,11 +243,6 @@ class AccordionCustom extends HTMLElement {
 
     // Set up media query for large screens (768px and above)
     this.mediaQuery = window.matchMedia('(min-width: 768px)');
-    
-    // Bind methods
-    this.handleClick = this.handleClick.bind(this);
-    this.#handleMediaQueryChange = this.#handleMediaQueryChange.bind(this);
-    this.#handleKeyDown = this.#handleKeyDown.bind(this);
 
     // Set initial open state
     this.#setDefaultOpenState();
