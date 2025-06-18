@@ -76,3 +76,27 @@ export class DiscountUpdateEvent extends Event {
     };
   }
 }
+
+/**
+ * Creates a fetch configuration object
+ * @param {string} [type] The type of response to expect
+ * @param {Object} [config] The config of the request
+ * @param {FetchConfig['body']} [config.body] The body of the request
+ * @param {FetchConfig['headers']} [config.headers] The headers of the request
+ * @returns {RequestInit} The fetch configuration object
+ */
+export function fetchConfig(type = 'json', config = {}) {
+  /** @type {Headers} */
+  const headers = { 'Content-Type': 'application/json', Accept: `application/${type}`, ...config.headers };
+
+  if (type === 'javascript') {
+    headers['X-Requested-With'] = 'XMLHttpRequest';
+    delete headers['Content-Type'];
+  }
+
+  return {
+    method: 'POST',
+    headers: /** @type {HeadersInit} */ (headers),
+    body: config.body,
+  };
+}
