@@ -73,7 +73,7 @@ console.log(config)
       });
 
       const data = await response.json();
-
+console.log(data)
       if (
         data.discount_codes.find((/** @type {{ code: string; applicable: boolean; }} */ discount) => {
           return discount.code === discountCodeValue && discount.applicable === false;
