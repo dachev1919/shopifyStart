@@ -36,7 +36,7 @@ class CartDiscount extends Component {
    * @param {SubmitEvent} event - The submit event on our form.
    */
   applyDiscount = async (event) => {
-    console.log('applyDiscount')
+    
     const { cartDiscountError, cartDiscountErrorDiscountCode, cartDiscountErrorShipping } = this.refs;
 
     event.preventDefault();
@@ -51,7 +51,7 @@ class CartDiscount extends Component {
     const discountCodeValue = discountCode.value;
 
     const abortController = this.#createAbortController();
-
+console.log('applyDiscount')
     try {
       const existingDiscounts = this.#existingDiscounts();
       if (existingDiscounts.includes(discountCodeValue)) return;
