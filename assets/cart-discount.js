@@ -51,7 +51,7 @@ class CartDiscount extends Component {
     const discountCodeValue = discountCode.value;
 
     const abortController = this.#createAbortController();
-console.log('applyDiscount')
+
     try {
       const existingDiscounts = this.#existingDiscounts();
       if (existingDiscounts.includes(discountCodeValue)) return;
@@ -73,7 +73,7 @@ console.log('applyDiscount')
       });
 
       const data = await response.json();
-
+console.log('applyDiscount')
       if (
         data.discount_codes.find((/** @type {{ code: string; applicable: boolean; }} */ discount) => {
           return discount.code === discountCodeValue && discount.applicable === false;
