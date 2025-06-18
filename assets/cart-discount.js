@@ -66,15 +66,14 @@ class CartDiscount extends Component {
           sections: [this.dataset.sectionId],
         }),
       });
-console.log(config)
-      console.log(Theme.routes.cart_update_url)
-      const response = await fetch(Theme.routes.cart_update_url, {
+
+      const response = await fetch(`${theme.routes.cart_update_url}.js`, {
         ...config,
         signal: abortController.signal,
       });
 
       const data = await response.json();
-console.log(data)
+
       if (
         data.discount_codes.find((/** @type {{ code: string; applicable: boolean; }} */ discount) => {
           return discount.code === discountCodeValue && discount.applicable === false;
