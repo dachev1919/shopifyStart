@@ -258,9 +258,9 @@ console.log(element)
         if (!(instance instanceof Component) || !method) return;
 
         method = method.replace(/\?.*/, '');
-console.log(method)
-        const callback = /** @type {any} */ (instance)[method];
 
+        const callback = /** @type {any} */ (instance)[method];
+console.log(callback)
         if (typeof callback === 'function') {
           try {
             /** @type {(Event | Data)[]} */
