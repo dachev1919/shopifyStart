@@ -1,7 +1,7 @@
-import { Component } from './cart-discount-component';
-import { morphSection } from './cart-discount-utilities';
-import { DiscountUpdateEvent } from './cart-discount-utilities';
-import { fetchConfig } from './cart-discount-utilities';
+import { Component } from './cart-discount-component.js';
+import { morphSection } from './cart-discount-utilities.js';
+import { DiscountUpdateEvent } from './cart-discount-utilities.js';
+import { fetchConfig } from './cart-discount-utilities.js';
 
 /**
  * A custom element that applies a discount to the cart.
