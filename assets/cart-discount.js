@@ -73,7 +73,7 @@ class CartDiscount extends Component {
       });
 
       const data = await response.json();
-
+console.log(data)
       if (
         data.discount_codes.find((/** @type {{ code: string; applicable: boolean; }} */ discount) => {
           return discount.code === discountCodeValue && discount.applicable === false;
@@ -88,7 +88,7 @@ class CartDiscount extends Component {
       const parsedHtml = new DOMParser().parseFromString(newHtml, 'text/html');
       const section = parsedHtml.getElementById(`shopify-section-${this.dataset.sectionId}`);
       const discountCodes = section?.querySelectorAll('.cart-discount__pill') || [];
-      console.log(section)
+      
       if (section) {
         const codes = Array.from(discountCodes)
           .map((element) => (element instanceof HTMLLIElement ? element.dataset.discountCode : null))
