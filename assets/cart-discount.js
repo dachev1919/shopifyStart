@@ -10,7 +10,91 @@ class DeclarativeShadowElement extends HTMLElement {
     }
   }
 }
+function registerEventListeners() {
+  if (initialized) return;
+  initialized = true;
 
+  const events = ['click', 'change', 'select', 'focus', 'blur', 'submit', 'input', 'keydown', 'keyup', 'toggle'];
+  const shouldBubble = ['focus', 'blur'];
+  const expensiveEvents = ['pointerenter', 'pointerleave'];
+
+  for (const eventName of [...events, ...expensiveEvents]) {
+    const attribute = `on:${eventName}`;
+
+    document.addEventListener(
+      eventName,
+      (event) => {
+        const element = getElement(event);
+
+        if (!element) return;
+
+        const proxiedEvent =
+          event.target !== element
+            ? new Proxy(event, {
+                get(target, property) {
+                  if (property === 'target') return element;
+
+                  const value = Reflect.get(target, property);
+
+                  if (typeof value === 'function') {
+                    return value.bind(target);
+                  }
+
+                  return value;
+                },
+              })
+            : event;
+
+        const value = element.getAttribute(attribute) ?? '';
+        let [selector, method] = value.split('/');
+        // Extract the last segment of the attribute value delimited by `?` or `/`
+        const data = value.match(/(?<=[\/\?][^\/\?]+)[\/\?][^\/\?]+$/)?.[0];
+        const instance = selector
+          ? selector.startsWith('#')
+            ? document.querySelector(selector)
+            : element.closest(selector)
+          : getClosestComponent(element);
+
+        if (!(instance instanceof Component) || !method) return;
+
+        method = method.replace(/\?.*/, '');
+
+        const callback = /** @type {any} */ (instance)[method];
+
+        if (typeof callback === 'function') {
+          try {
+            /** @type {(Event | Data)[]} */
+            const args = [proxiedEvent];
+
+            if (data) args.unshift(parseData(data));
+
+            callback.call(instance, ...args);
+          } catch (error) {
+            console.error(error);
+          }
+        }
+      },
+      { capture: true }
+    );
+  }
+
+  /** @param {Event} event */
+  function getElement(event) {
+    const target = event.composedPath?.()[0] ?? event.target;
+
+    if (!(target instanceof Element)) return;
+
+    if (target.hasAttribute(`on:${event.type}`)) {
+      return target;
+    }
+
+    if (expensiveEvents.includes(event.type)) {
+      return null;
+    }
+
+    return event.bubbles || shouldBubble.includes(event.type) ? target.closest(`[on\\:${event.type}]`) : null;
+  }
+}
 class Component extends DeclarativeShadowElement {
   /**
    * An object holding references to child elements with `ref` attributes.
