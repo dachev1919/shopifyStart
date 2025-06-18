@@ -1,4 +1,4 @@
-import { requestIdleCallback } from './cart-discount-utilities';
+import { requestIdleCallback } from './cart-discount-utilities.js';
 
 /**
  * @typedef {Record<string, Element | Element[] | undefined>} Refs
