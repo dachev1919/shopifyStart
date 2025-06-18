@@ -1,44 +1,45 @@
-import { Component } from '@theme/component';
-import { morphSection } from '@theme/section-renderer';
-import { DiscountUpdateEvent } from '@theme/events';
-import { fetchConfig } from '@theme/utilities';
-import { cartPerformance } from '@theme/performance';
-
 /**
- * A custom element that applies a discount to the cart.
- *
- * @typedef {Object} CartDiscountComponentRefs
- * @property {HTMLElement} cartDiscountError - The error element.
- * @property {HTMLElement} cartDiscountErrorDiscountCode - The discount code error element.
- * @property {HTMLElement} cartDiscountErrorShipping - The shipping error element.
+ * A standalone script to handle cart discount functionality.
  */
+class CartDiscount {
+  constructor(element) {
+    // Required DOM elements
+    this.element = element;
+    this.cartDiscountError = element.querySelector('[data-ref="cartDiscountError"]');
+    this.cartDiscountErrorDiscountCode = element.querySelector('[data-ref="cartDiscountErrorDiscountCode"]');
+    this.cartDiscountErrorShipping = element.querySelector('[data-ref="cartDiscountErrorShipping"]');
+    this.sectionId = element.dataset.sectionId;
 
-/**
- * @extends {Component<CartDiscountComponentRefs>}
- */
-class CartDiscount extends Component {
-  requiredRefs = ['cartDiscountError', 'cartDiscountErrorDiscountCode', 'cartDiscountErrorShipping'];
+    // Abort controller for fetch requests
+    this.activeFetch = null;
 
-  /** @type {AbortController | null} */
-  #activeFetch = null;
+    // Bind methods
+    this.applyDiscount = this.applyDiscount.bind(this);
+    this.removeDiscount = this.removeDiscount.bind(this);
+
+    // Initialize event listeners
+    this.init();
+  }
+
+  init() {
+    const form = this.element.querySelector('form');
+    if (form) {
+      form.addEventListener('submit', this.applyDiscount);
+    }
+    this.element.addEventListener('click', this.removeDiscount);
+    this.element.addEventListener('keydown', this.removeDiscount);
+  }
 
   #createAbortController() {
-    if (this.#activeFetch) {
-      this.#activeFetch.abort();
+    if (this.activeFetch) {
+      this.activeFetch.abort();
     }
-
     const abortController = new AbortController();
-    this.#activeFetch = abortController;
+    this.activeFetch = abortController;
     return abortController;
   }
 
-  /**
-   * Handles updates to the cart note.
-   * @param {SubmitEvent} event - The submit event on our form.
-   */
-  applyDiscount = async (event) => {
-    const { cartDiscountError, cartDiscountErrorDiscountCode, cartDiscountErrorShipping } = this.refs;
-
+  applyDiscount(event) {
     event.preventDefault();
     event.stopPropagation();
 
@@ -46,90 +47,92 @@ class CartDiscount extends Component {
     if (!(form instanceof HTMLFormElement)) return;
 
     const discountCode = form.querySelector('input[name="discount"]');
-    if (!(discountCode instanceof HTMLInputElement) || typeof this.dataset.sectionId !== 'string') return;
+    if (!(discountCode instanceof HTMLInputElement) || !this.sectionId) return;
 
     const discountCodeValue = discountCode.value;
 
     const abortController = this.#createAbortController();
 
-    try {
-      const existingDiscounts = this.#existingDiscounts();
-      if (existingDiscounts.includes(discountCodeValue)) return;
+    const existingDiscounts = this.#existingDiscounts();
+    if (existingDiscounts.includes(discountCodeValue)) return;
 
-      cartDiscountError.classList.add('hidden');
-      cartDiscountErrorDiscountCode.classList.add('hidden');
-      cartDiscountErrorShipping.classList.add('hidden');
+    // Hide error messages
+    this.cartDiscountError.classList.add('hidden');
+    this.cartDiscountErrorDiscountCode.classList.add('hidden');
+    this.cartDiscountErrorShipping.classList.add('hidden');
 
-      const config = fetchConfig('json', {
-        body: JSON.stringify({
-          discount: [...existingDiscounts, discountCodeValue].join(','),
-          sections: [this.dataset.sectionId],
-        }),
-      });
+    // Prepare fetch request
+    const config = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify({
+        discount: [...existingDiscounts, discountCodeValue].join(','),
+        sections: [this.sectionId],
+      }),
+      signal: abortController.signal,
+    };
 
-      const response = await fetch(Theme.routes.cart_update_url, {
-        ...config,
-        signal: abortController.signal,
-      });
-
-      const data = await response.json();
-
-      if (
-        data.discount_codes.find((/** @type {{ code: string; applicable: boolean; }} */ discount) => {
-          return discount.code === discountCodeValue && discount.applicable === false;
-        })
-      ) {
-        discountCode.value = '';
-        this.#handleDiscountError('discount_code');
-        return;
-      }
-
-      const newHtml = data.sections[this.dataset.sectionId];
-      const parsedHtml = new DOMParser().parseFromString(newHtml, 'text/html');
-      const section = parsedHtml.getElementById(`shopify-section-${this.dataset.sectionId}`);
-      const discountCodes = section?.querySelectorAll('.cart-discount__pill') || [];
-      if (section) {
-        const codes = Array.from(discountCodes)
-          .map((element) => (element instanceof HTMLLIElement ? element.dataset.discountCode : null))
-          .filter(Boolean);
-        // Before morphing, we need to check if the shipping discount is applicable in the UI
-        // we check the liquid logic compared to the cart payload to assess whether we leveraged
-        // a valid shipping discount code.
-        if (
-          codes.length === existingDiscounts.length &&
-          codes.every((/** @type {string} */ code) => existingDiscounts.includes(code)) &&
-          data.discount_codes.find((/** @type {{ code: string; applicable: boolean; }} */ discount) => {
-            return discount.code === discountCodeValue && discount.applicable === true;
-          })
-        ) {
-          this.#handleDiscountError('shipping');
+    fetch(window.Theme?.routes?.cart_update_url || '/cart/update.js', config)
+      .then((response) => response.json())
+      .then((data) => {
+        // Check for invalid discount code
+        if (data.discount_codes.find((discount) => discount.code === discountCodeValue && !discount.applicable)) {
           discountCode.value = '';
+          this.#handleDiscountError('discount_code');
           return;
         }
-      }
 
-      document.dispatchEvent(new DiscountUpdateEvent(data, this.id));
-      morphSection(this.dataset.sectionId, newHtml);
-    } catch (error) {
-    } finally {
-      this.#activeFetch = null;
-      cartPerformance.measureFromEvent('discount-update:user-action', event);
-    }
-  };
+        const newHtml = data.sections[this.sectionId];
+        const parsedHtml = new DOMParser().parseFromString(newHtml, 'text/html');
+        const section = parsedHtml.getElementById(`shopify-section-${this.sectionId}`);
+        const discountCodes = section?.querySelectorAll('.cart-discount__pill') || [];
 
-  /**
-   * Handles removing a discount from the cart.
-   * @param {MouseEvent | KeyboardEvent} event - The mouse or keyboard event in our pill.
-   */
-  removeDiscount = async (event) => {
+        if (section) {
+          const codes = Array.from(discountCodes)
+            .map((element) => element.dataset.discountCode)
+            .filter(Boolean);
+          if (
+            codes.length === existingDiscounts.length &&
+            codes.every((code) => existingDiscounts.includes(code)) &&
+            data.discount_codes.find((discount) => discount.code === discountCodeValue && discount.applicable)
+          ) {
+            this.#handleDiscountError('shipping');
+            discountCode.value = '';
+            return;
+          }
+        }
+
+        // Update DOM
+        const targetSection = document.getElementById(`shopify-section-${this.sectionId}`);
+        if (targetSection && section) {
+          targetSection.innerHTML = section.innerHTML;
+        }
+
+        // Dispatch custom event
+        const discountUpdateEvent = new CustomEvent('discount-update', { detail: { data, id: this.element.id } });
+        document.dispatchEvent(discountUpdateEvent);
+      })
+      .catch((error) => {
+        if (error.name !== 'AbortError') {
+          console.error('Fetch error:', error);
+        }
+      })
+      .finally(() => {
+        this.activeFetch = null;
+      });
+  }
+
+  removeDiscount(event) {
     event.preventDefault();
     event.stopPropagation();
 
     if (
       (event instanceof KeyboardEvent && event.key !== 'Enter') ||
-      !(event instanceof MouseEvent) ||
       !(event.target instanceof HTMLElement) ||
-      typeof this.dataset.sectionId !== 'string'
+      !this.sectionId
     ) {
       return;
     }
@@ -148,56 +151,62 @@ class CartDiscount extends Component {
 
     const abortController = this.#createAbortController();
 
-    try {
-      const config = fetchConfig('json', {
-        body: JSON.stringify({ discount: existingDiscounts.join(','), sections: [this.dataset.sectionId] }),
+    const config = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify({
+        discount: existingDiscounts.join(','),
+        sections: [this.sectionId],
+      }),
+      signal: abortController.signal,
+    };
+
+    fetch(window.Theme?.routes?.cart_update_url || '/cart/update.js', config)
+      .then((response) => response.json())
+      .then((data) => {
+        const targetSection = document.getElementById(`shopify-section-${this.sectionId}`);
+        const newHtml = data.sections[this.sectionId];
+        const parsedHtml = new DOMParser().parseFromString(newHtml, 'text/html');
+        const section = parsedHtml.getElementById(`shopify-section-${this.sectionId}`);
+        if (targetSection && section) {
+          targetSection.innerHTML = section.innerHTML;
+        }
+
+        const discountUpdateEvent = new CustomEvent('discount-update', { detail: { data, id: this.element.id } });
+        document.dispatchEvent(discountUpdateEvent);
+      })
+      .catch((error) => {
+        if (error.name !== 'AbortError') {
+          console.error('Fetch error:', error);
+        }
+      })
+      .finally(() => {
+        this.activeFetch = null;
       });
+  }
 
-      const response = await fetch(Theme.routes.cart_update_url, {
-        ...config,
-        signal: abortController.signal,
-      });
-
-      const data = await response.json();
-
-      document.dispatchEvent(new DiscountUpdateEvent(data, this.id));
-      morphSection(this.dataset.sectionId, data.sections[this.dataset.sectionId]);
-    } catch (error) {
-    } finally {
-      this.#activeFetch = null;
-    }
-  };
-
-  /**
-   * Handles the discount error.
-   *
-   * @param {'discount_code' | 'shipping'} type - The type of discount error.
-   */
   #handleDiscountError(type) {
-    const { cartDiscountError, cartDiscountErrorDiscountCode, cartDiscountErrorShipping } = this.refs;
-    const target = type === 'discount_code' ? cartDiscountErrorDiscountCode : cartDiscountErrorShipping;
-    cartDiscountError.classList.remove('hidden');
+    const target = type === 'discount_code' ? this.cartDiscountErrorDiscountCode : this.cartDiscountErrorShipping;
+    this.cartDiscountError.classList.remove('hidden');
     target.classList.remove('hidden');
   }
 
-  /**
-   * Returns an array of existing discount codes.
-   * @returns {string[]}
-   */
   #existingDiscounts() {
-    /** @type {string[]} */
     const discountCodes = [];
-    const discountPills = this.querySelectorAll('.cart-discount__pill');
+    const discountPills = this.element.querySelectorAll('.cart-discount__pill');
     for (const pill of discountPills) {
-      if (pill instanceof HTMLLIElement && typeof pill.dataset.discountCode === 'string') {
+      if (pill instanceof HTMLLIElement && pill.dataset.discountCode) {
         discountCodes.push(pill.dataset.discountCode);
       }
     }
-
     return discountCodes;
   }
 }
 
-if (!customElements.get('cart-discount-component')) {
-  customElements.define('cart-discount-component', CartDiscount);
-}
+// Initialize all cart-discount components
+document.querySelectorAll('cart-discount-component').forEach((element) => {
+  new CartDiscount(element);
+});
