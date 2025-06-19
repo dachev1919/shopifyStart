@@ -348,5 +348,16 @@
         "default": true
       }
     ]
+  },
+  {
+    "name": "Cart",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_add_discount_code",
+        "label": "Allow discounts in cart",
+        "default": true
+      }
+    ]
   }
 ]

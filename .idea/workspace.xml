@@ -5,8 +5,251 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a32ced2b-8a22-496d-b09c-6acf9a3b9058" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/awesome.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/awesome.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/cart-discount-component.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/cart-discount-component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/cart-discount-morph.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/cart-discount-morph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/cart-discount-utilities.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/cart-discount.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/cart-discount.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings_schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings_schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/.theme-check.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/cart-notification.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/cart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/collage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-accordion.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-article-card.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-card.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-cart-items.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-cart-notification.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-cart.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-collection-hero.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-deferred-media.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-discounts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-facets.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-image-with-text.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-list-menu.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-list-payment.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-list-social.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-loading-overlay.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-menu-drawer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-model-viewer-ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-newsletter.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-pagination.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-pickup-availability.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-predictive-search.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-price.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-product-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-product-model.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-rating.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-rte.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-search.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-slider.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/component-totals.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/customer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/customer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/details-disclosure.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/details-modal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/disclosure.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/facets.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/global.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/newsletter-section.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/password-modal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/pickup-availability.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/predictive-search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/product-form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/product-model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/section-blog-post.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/section-collection-list.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/section-contact-form.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/section-email-signup-banner.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/section-featured-blog.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/section-featured-product.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/section-footer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/section-image-banner.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/section-main-blog.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/section-main-page.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/section-main-product.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/section-multicolumn.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/section-password.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/section-product-recommendations.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/section-rich-text.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/share.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/template-collection.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/template-giftcard.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/assets/video-section.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/config/settings_data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/config/settings_schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/layout/password.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/layout/theme.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/bg-BG.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/cs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/cs.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/da.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/da.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/de.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/de.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/el.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/en.default.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/en.default.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/es.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/es.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/fi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/fi.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/fr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/fr.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/hr-HR.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/hu.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/id.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/it.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/it.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/ja.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/ja.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/ko.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/ko.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/lt-LT.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/nb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/nb.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/nl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/nl.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/pl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/pl.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/pt-BR.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/pt-BR.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/pt-PT.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/pt-PT.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/ro-RO.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/ru.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/sk-SK.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/sl-SI.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/sv.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/sv.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/th.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/th.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/tr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/tr.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/vi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/vi.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/zh-CN.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/zh-CN.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/zh-TW.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/locales/zh-TW.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/announcement-bar.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/apps.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/cart-icon-bubble.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/cart-live-region-text.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/cart-notification-button.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/cart-notification-product.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/collage.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/collection-list.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/contact-form.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/custom-liquid.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/email-signup-banner.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/featured-blog.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/featured-collection.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/featured-product.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/footer.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/header.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/image-banner.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/image-with-text.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/main-404.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/main-article.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/main-blog.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/main-cart-footer.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/main-cart-items.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/main-collection-banner.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/main-collection-product-grid.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/main-list-collections.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/main-page.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/main-password-footer.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/main-password-header.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/main-product.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/main-search.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/multicolumn.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/newsletter.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/page.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/pickup-availability.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/predictive-search.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/product-recommendations.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/rich-text.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/sections/video.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/article-card.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/cart-notification.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/email-signup-banner-background-mobile.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/email-signup-banner-background.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/facets.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-3d-model.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-accordion.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-account.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-arrow.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-caret.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-cart-empty.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-cart.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-checkmark.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-clipboard.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-close-small.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-close.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-discount.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-error.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-facebook.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-filter.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-hamburger.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-instagram.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-minus.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-padlock.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-pinterest.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-play.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-plus.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-remove.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-share.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-snapchat.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-success.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-tick.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-tiktok.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-tumblr.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-twitter.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-unavailable.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-vimeo.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-youtube.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/icon-zoom.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/meta-tags.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/pagination.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/price.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/product-card-placeholder.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/product-card.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/product-media.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/snippets/product-thumbnail.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/templates/404.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/templates/article.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/templates/blog.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/templates/cart.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/templates/collection.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/templates/customers/account.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/templates/customers/activate_account.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/templates/customers/addresses.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/templates/customers/login.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/templates/customers/order.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/templates/customers/register.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/templates/customers/reset_password.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/templates/gift_card.liquid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/templates/index.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/templates/list-collections.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/templates/page.contact.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/templates/page.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/templates/password.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/templates/product.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/templates/search.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dawn-theme/translation.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout/theme.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/layout/theme.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/en.default.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en.default.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/main-cart-items.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/main-cart-items.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snippets/cart-discount.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/cart-discount.liquid" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,24 +262,46 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;dachev1919&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/dachev1919/shopifyStart.git&quot;,
+    &quot;accountId&quot;: &quot;5dc0279d-17d4-418d-bc14-99ac6f9af9cb&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="22Bu1YbJN2EmkvzzTPMwBStNp0X" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="vue.rearranger.settings.migration" value="true" />
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/SHOPIFY(STELLAR_SOFT)/shopifyStart&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-WS-251.26094.131" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -52,6 +317,9 @@
       <workItem from="1639327617719" duration="1196000" />
       <workItem from="1639415558970" duration="5011000" />
       <workItem from="1639502369246" duration="3549000" />
+      <workItem from="1750246727794" duration="18115000" />
+      <workItem from="1750318356957" duration="1310000" />
+      <workItem from="1750322943064" duration="11257000" />
     </task>
     <servers />
   </component>
@@ -68,6 +336,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

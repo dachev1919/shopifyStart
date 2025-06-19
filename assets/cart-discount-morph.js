@@ -1,18 +1,6 @@
 import { Component } from './cart-discount-component.js';
 
-/**
- * @typedef {Object} Options
- * @property {boolean} [childrenOnly] - Only update children
- * @property {(node: Node | undefined) => string|number|undefined} [getNodeKey] - Get node key for matching
- * @property {(oldNode: Node, newNode: Node) => void} [onBeforeUpdate] - Pre-update hook
- * @property {(node: Node) => void} [onAfterUpdate] - Post-update hook
- * @property {(oldNode: Node, newNode: Node) => boolean} [reject] - Reject a node from being morphed
- */
-
-/**
- * The options for the morph
- * @type {Options}
- */
+/* The options for the morph */
 const MORPH_OPTIONS = {
   childrenOnly: true,
   reject(oldNode, newNode) {
@@ -20,24 +8,7 @@ const MORPH_OPTIONS = {
       return true;
     }
 
-    if (
-      newNode instanceof HTMLTemplateElement &&
-      newNode.shadowRootMode === 'open' &&
-      oldNode.parentElement &&
-      newNode.parentElement &&
-      oldNode.parentElement.tagName === newNode.parentElement.tagName &&
-      oldNode.parentElement?.shadowRoot != null
-    ) {
-      // Ignore template elements of components that are already initialized
-      return true;
-    }
-
-    if (newNode.nodeType === Node.COMMENT_NODE && newNode.nodeValue === 'shopify:rendered_by_section_api') {
-      // Remove a comment node injected by the Section Rendering API in the Theme Editor
-      return true;
-    }
-
-    return false;
+    return newNode.nodeType === Node.COMMENT_NODE && newNode.nodeValue === 'shopify:rendered_by_section_api';
   },
   onBeforeUpdate(oldNode, newNode) {
     if (oldNode instanceof Element && newNode instanceof Element) {
@@ -77,13 +48,7 @@ const MORPH_OPTIONS = {
   },
 };
 
-/**
- * Morphs one DOM tree into another by comparing nodes and applying minimal changes
- * @param {Node} oldTree - The existing DOM tree
- * @param {Node | string} newTree - The new DOM tree to morph to
- * @param {Options} [options] - Configuration options
- * @returns {Node} The morphed DOM tree
- */
+/* Morphs one DOM tree into another by comparing nodes and applying minimal changes */
 export function morph(oldTree, newTree, options = MORPH_OPTIONS) {
   if (!oldTree || !newTree) {
     throw new Error('Both oldTree and newTree must be provided');
@@ -109,13 +74,7 @@ export function morph(oldTree, newTree, options = MORPH_OPTIONS) {
   return walk(newTree, oldTree, options);
 }
 
-/**
- * Walk and morph a dom tree
- * @param {Node} newNode - The new node to morph to
- * @param {Node} oldNode - The old node to morph from
- * @param {Options} options - The options object
- * @returns {Node} The new node or the morphed old node
- */
+/* Walk and morph a dom tree */
 function walk(newNode, oldNode, options) {
   // Skip morphing if there is no old or new node
   if (!oldNode) return newNode;
@@ -157,12 +116,7 @@ function walk(newNode, oldNode, options) {
   return oldNode;
 }
 
-/**
- * Core morphing function that updates attributes and special elements
- * @param {Node} newNode - Source node with desired state
- * @param {Node} oldNode - Target node to update
- * @param {Options} options - The options object
- */
+/* Core morphing function that updates attributes and special elements */
 function updateNode(newNode, oldNode, options) {
   options.onBeforeUpdate?.(oldNode, newNode);
 
@@ -206,22 +160,12 @@ function updateNode(newNode, oldNode, options) {
   }
 }
 
-/**
- * Gets a node's key using the getNodeKey option if provided
- * @param {Node | undefined} node - The node to get the key from
- * @param {Options} [options] - The options object that may contain getNodeKey
- * @returns {string|number|undefined} The node's key if one exists
- */
+/* Gets a node's key using the getNodeKey option if provided */
 function getNodeKey(node, options) {
   return options?.getNodeKey?.(node) ?? (node instanceof Element ? node.id : undefined);
 }
 
-/**
- * Updates a boolean attribute and its corresponding property on an element
- * @param {any} newNode - The new element
- * @param {any} oldNode - The existing element to update
- * @param {string} name - The name of the attribute/property to update
- */
+/* Updates a boolean attribute and its corresponding property on an element */
 function updateAttribute(newNode, oldNode, name) {
   if (newNode[name] !== oldNode[name]) {
     oldNode[name] = newNode[name];
@@ -233,11 +177,7 @@ function updateAttribute(newNode, oldNode, name) {
   }
 }
 
-/**
- * Copies attributes from a new node to an old node, handling namespaced attributes
- * @param {Element} newNode - The new node to copy attributes from
- * @param {Element} oldNode - The existing node to update attributes on
- */
+/* Copies attributes from a new node to an old node, handling namespaced attributes */
 function copyAttributes(newNode, oldNode) {
   const oldAttrs = oldNode.attributes;
   const newAttrs = newNode.attributes;
@@ -294,8 +234,6 @@ function copyAttributes(newNode, oldNode) {
 /**
  * Updates special properties and attributes on input elements
  * Handles checked, disabled, indeterminate states and value
- * @param {HTMLInputElement} newNode - The new input element
- * @param {HTMLInputElement} oldNode - The existing input element to update
  */
 function updateInput(newNode, oldNode) {
   const newValue = newNode.value;
@@ -329,11 +267,7 @@ function updateInput(newNode, oldNode) {
   }
 }
 
-/**
- * Updates the value of a textarea element
- * @param {HTMLTextAreaElement} newNode - The new textarea element
- * @param {HTMLTextAreaElement} oldNode - The existing textarea element to update
- */
+/* Updates the value of a textarea element */
 function updateTextarea(newNode, oldNode) {
   const newValue = newNode.value;
   if (newValue !== oldNode.value) {
@@ -349,12 +283,7 @@ function updateTextarea(newNode, oldNode) {
   }
 }
 
-/**
- * Update the children of elements
- * @param {Node} newNode - The new node to update children on
- * @param {Node} oldNode - The existing node to update children on
- * @param {Options} options - The options object
- */
+/* Update the children of elements */
 function updateChildren(newNode, oldNode, options) {
   if (
     oldNode instanceof Element &&
@@ -437,13 +366,7 @@ function updateChildren(newNode, oldNode, options) {
   }
 }
 
-/**
- * Check if two nodes are the same
- * @param {Node} a - The first node
- * @param {Node} b - The second node
- * @param {Options} options - The options object
- * @returns {boolean} True if the nodes are the same, false otherwise
- */
+/* Check if two nodes are the same */
 function same(a, b, options) {
   // If node types don't match, they're not the same
   if (a.nodeType !== b.nodeType) return false;
@@ -466,4 +389,21 @@ function same(a, b, options) {
 
   // If we get here and nodes are elements with same tag (and compatible keys), they're the same
   return true;
+}
+
+/* Builds a section selector */
+function buildSectionSelector(sectionId, ) {
+  return `shopify-section-${sectionId}`;
+}
+
+/* Morphs the existing section element with the new section contents */
+export async function morphSection(sectionId, html) {
+  const fragment = new DOMParser().parseFromString(html, 'text/html');
+  const existingElement = document.getElementById(buildSectionSelector(sectionId));
+  const newElement = fragment.getElementById(buildSectionSelector(sectionId));
+
+  if (!existingElement) throw new Error(`Section ${sectionId} not found`);
+  if (!newElement) throw new Error(`Section ${sectionId} not found in the section rendering response`);
+
+  morph(existingElement, newElement);
 }

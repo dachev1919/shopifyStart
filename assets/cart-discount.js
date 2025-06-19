@@ -1,24 +1,20 @@
 import { Component } from './cart-discount-component.js';
-import { morphSection } from './cart-discount-utilities.js';
-import { DiscountUpdateEvent } from './cart-discount-utilities.js';
-import { fetchConfig } from './cart-discount-utilities.js';
+import { morphSection } from './cart-discount-morph.js';
+import { CartDiscountAccordion } from './cart-discount-accordion.js';
 
-/**
- * A custom element that applies a discount to the cart.
- *
- * @typedef {Object} CartDiscountComponentRefs
- * @property {HTMLElement} cartDiscountError - The error element.
- * @property {HTMLElement} cartDiscountErrorDiscountCode - The discount code error element.
- * @property {HTMLElement} cartDiscountErrorShipping - The shipping error element.
- */
-
-/**
- * @extends {Component<CartDiscountComponentRefs>}
- */
+class DiscountUpdateEvent extends Event {
+  /* Creates a new DiscountUpdateEvent */
+  constructor(resource, sourceId) {
+    super('discount:update', { bubbles: true });
+    this.detail = {
+      resource,
+      sourceId,
+    };
+  }
+}
+/* A custom element that applies a discount to the cart. */
 class CartDiscount extends Component {
   requiredRefs = ['cartDiscountError', 'cartDiscountErrorDiscountCode', 'cartDiscountErrorShipping'];
-
-  /** @type {AbortController | null} */
   #activeFetch = null;
 
   #createAbortController() {
@@ -31,12 +27,8 @@ class CartDiscount extends Component {
     return abortController;
   }
 
-  /**
-   * Handles updates to the cart note.
-   * @param {SubmitEvent} event - The submit event on our form.
-   */
+  /* Handles updates to the cart note. */
   applyDiscount = async (event) => {
-    console.log(DiscountUpdateEvent)
     const { cartDiscountError, cartDiscountErrorDiscountCode, cartDiscountErrorShipping } = this.refs;
 
     event.preventDefault();
@@ -67,7 +59,7 @@ class CartDiscount extends Component {
         }),
       });
 
-      const response = await fetch(Theme.routes.cart_update_url, {
+      const response = await fetch(Discount.routes.cart_update_url, {
         ...config,
         signal: abortController.signal,
       });
@@ -75,7 +67,7 @@ class CartDiscount extends Component {
       const data = await response.json();
 
       if (
-        data.discount_codes.find((/** @type {{ code: string; applicable: boolean; }} */ discount) => {
+        data.discount_codes.find((discount) => {
           return discount.code === discountCodeValue && discount.applicable === false;
         })
       ) {
@@ -88,7 +80,7 @@ class CartDiscount extends Component {
       const parsedHtml = new DOMParser().parseFromString(newHtml, 'text/html');
       const section = parsedHtml.getElementById(`shopify-section-${this.dataset.sectionId}`);
       const discountCodes = section?.querySelectorAll('.cart-discount__pill') || [];
-      
+
       if (section) {
         const codes = Array.from(discountCodes)
           .map((element) => (element instanceof HTMLLIElement ? element.dataset.discountCode : null))
@@ -98,8 +90,8 @@ class CartDiscount extends Component {
         // a valid shipping discount code.
         if (
           codes.length === existingDiscounts.length &&
-          codes.every((/** @type {string} */ code) => existingDiscounts.includes(code)) &&
-          data.discount_codes.find((/** @type {{ code: string; applicable: boolean; }} */ discount) => {
+          codes.every((code) => existingDiscounts.includes(code)) &&
+          data.discount_codes.find((discount) => {
             return discount.code === discountCodeValue && discount.applicable === true;
           })
         ) {
@@ -117,12 +109,8 @@ class CartDiscount extends Component {
     }
   };
 
-  /**
-   * Handles removing a discount from the cart.
-   * @param {MouseEvent | KeyboardEvent} event - The mouse or keyboard event in our pill.
-   */
+  /* Handles removing a discount from the cart. */
   removeDiscount = async (event) => {
-    console.log('removeDiscount')
     event.preventDefault();
     event.stopPropagation();
 
@@ -154,7 +142,7 @@ class CartDiscount extends Component {
         body: JSON.stringify({ discount: existingDiscounts.join(','), sections: [this.dataset.sectionId] }),
       });
 
-      const response = await fetch(Theme.routes.cart_update_url, {
+      const response = await fetch(Discount.routes.cart_update_url, {
         ...config,
         signal: abortController.signal,
       });
@@ -169,11 +157,6 @@ class CartDiscount extends Component {
     }
   };
 
-  /**
-   * Handles the discount error.
-   *
-   * @param {'discount_code' | 'shipping'} type - The type of discount error.
-   */
   #handleDiscountError(type) {
     const { cartDiscountError, cartDiscountErrorDiscountCode, cartDiscountErrorShipping } = this.refs;
     const target = type === 'discount_code' ? cartDiscountErrorDiscountCode : cartDiscountErrorShipping;
@@ -181,12 +164,8 @@ class CartDiscount extends Component {
     target.classList.remove('hidden');
   }
 
-  /**
-   * Returns an array of existing discount codes.
-   * @returns {string[]}
-   */
+  /* Returns an array of existing discount codes. */
   #existingDiscounts() {
-    /** @type {string[]} */
     const discountCodes = [];
     const discountPills = this.querySelectorAll('.cart-discount__pill');
     for (const pill of discountPills) {
@@ -201,4 +180,22 @@ class CartDiscount extends Component {
 
 if (!customElements.get('cart-discount-component')) {
   customElements.define('cart-discount-component', CartDiscount);
+}
+if (!customElements.get('cart-discount-accordion')) {
+  customElements.define('cart-discount-accordion', CartDiscountAccordion);
+}
+
+function fetchConfig(type = 'json', config = {}) {
+  const headers = { 'Content-Type': 'application/json', Accept: `application/${type}`, ...config.headers };
+
+  if (type === 'javascript') {
+    headers['X-Requested-With'] = 'XMLHttpRequest';
+    delete headers['Content-Type'];
+  }
+
+  return {
+    method: 'POST',
+    headers: (headers),
+    body: config.body,
+  };
 }

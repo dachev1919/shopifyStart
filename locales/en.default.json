@@ -1,4 +1,18 @@
 {
+  "discount_field": {
+    "content": {
+      "discount": "Discount",
+      "discount_code": "Discount code",
+      "apply": "Apply",
+      "discount_code_error": "Discount code cannot be applied to your cart",
+      "shipping_discount_error": "Shipping discounts are shown at checkout after adding an address",
+      "remove_discount": "Remove discount {{ code }}"
+    },
+    "accessibility": {
+      "discount": "Apply a discount code",
+      "discount_applied": "Applied discount code: {{ code }}"
+    }
+  },
   "general": {
     "password_page": {
       "login_form_heading": "Enter store using password:",

@@ -122,24 +122,16 @@
     {%- endif -%}
 
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
-    {% if settings.show_add_discount_code %}{% endif %}
-    <script
-      src="{{ 'cart-discount.js' | asset_url }}"
-      type="module"
-    ></script>
-    <script>
-      const Theme = {
-        routes: {
-          root: '/',
-          cart_add_url: '{{ routes.cart_add_url }}',
-          cart_change_url: '{{ routes.cart_change_url }}',
-          cart_update_url: '{{ routes.cart_update_url }}',
-          cart_url: '{{ routes.cart_url }}',
-          predictive_search_url: '{{ routes.predictive_search_url }}',
-          search_url: '{{ routes.search_url }}',
-        },
-      };
-    </script>
+    {%- if settings.show_add_discount_code -%}
+      <script
+        src="{{ 'cart-discount.js' | asset_url }}"
+        type="module"
+        defer
+      ></script>
+      <script>
+        const Discount = { routes: { cart_update_url: '{{ routes.cart_update_url }}' } };
+      </script>
+    {%- endif -%}
   </head>
 
   <body class="gradient">
